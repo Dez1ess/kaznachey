@@ -1,29 +1,46 @@
 export default function About() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Про систему</h1>
+    <div className="space-y-6">
+      {/* Заголовок */}
+      <div>
+        <h1 className="text-4xl font-extrabold text-blue-900 dark:text-blue-400">
+          Про систему
+        </h1>
+      </div>
 
-      <p className="text-gray-700 mb-4">
-        Це демонстраційна інформаційна система, що імітує роботу елементів
-        казначейського обліку. Створена з навчальною метою та демонструє базові
-        принципи організації електронних бюджетних даних.
-      </p>
+      {/* Опис */}
+      <div>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+          Це демонстраційна інформаційна система, що імітує роботу елементів
+          казначейського обліку. Створена з навчальною метою та демонструє
+          базові принципи організації електронних бюджетних даних.
+        </p>
+      </div>
 
-      <p className="text-gray-700 mb-4">
-        Проєкт містить:
-        <ul className="list-disc ml-6 mt-2">
-          <li>Перегляд та фільтрацію транзакцій з PDF-експортом</li>
+      {/* Картка з можливостями */}
+      <div className="p-6 sm:p-8 rounded-2xl border bg-white dark:bg-gray-800 shadow-md space-y-6">
+        <div>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            Основні можливості
+          </h2>
+        </div>
+
+        <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+          <li>Перегляд та фільтрація транзакцій з PDF-експортом</li>
           <li>Інтерактивні графіки надходжень та витрат</li>
           <li>Dashboard із ключовими показниками</li>
-          <li>Контактну форму та інтерактивну карту</li>
-          <li>Темну/світлу тему та базовий логін користувача</li>
+          <li>Контактна форма та інтерактивна карта</li>
+          <li>Темна/світла тема</li>
         </ul>
-      </p>
+      </div>
 
-      <p className="text-gray-700">
-        Всі дані умовні, але сайт виглядає як реальна внутрішня система
-        казначейства.
-      </p>
+      {/* Заключення */}
+      <div>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
+          Всі дані умовні, але дизайн повторює реальний вигляд внутрішніх систем
+          казначейства.
+        </p>
+      </div>
     </div>
   );
 }
