@@ -13,12 +13,12 @@ import {
 
 export default function Reports() {
   const { transactions } = useContext(TransactionsContext);
-  const [period, setPeriod] = useState("Місяць");
+  const [period, setPeriod] = useState("Поточний місяць");
   const [isOpen, setIsOpen] = useState(false);
 
   // Дані для графіку
   const chartData = useMemo(() => {
-    if (period === "Місяць") {
+    if (period === "Поточний місяць") {
       // групуємо по днях поточного місяця
       const currentMonth = new Date().getMonth() + 1;
       const currentYear = new Date().getFullYear();
@@ -90,8 +90,8 @@ export default function Reports() {
             onFocus={() => setIsOpen(true)}
             onBlur={() => setIsOpen(false)}
           >
-            <option>Поточний місяць</option>
-            <option>Рік</option>
+            <option value="Поточний місяць">Поточний місяць</option>
+            <option value="Рік">Рік</option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
             <svg
@@ -156,7 +156,7 @@ export default function Reports() {
                 margin={{ top: 10, right: 30, left: 0, bottom: 10 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#aaa4" />
-                <XAxis dataKey={period === "Місяць" ? "day" : "month"} />
+                <XAxis dataKey={period === "Поточний місяць" ? "day" : "month"} />
                 <YAxis />
                 <Tooltip
                   contentStyle={{
